@@ -38,4 +38,3 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 =======
 # portfolio
 my portfolio
->>>>>>> e68858c6dc0ed7a07d7588de82590333b999400d
