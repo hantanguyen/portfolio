@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import './fonts.css';
 
 export default function Home() {
   return (
@@ -9,35 +10,33 @@ export default function Home() {
         <meta name="description" content="Portfolio of Hori Nguyen" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <header className="bg-blue-700 text-white py-4 px-8">
-        <nav className="flex justify-between items-center">
+      <header className="bg-white text-white py-4 px-8">
+      <nav className="flex justify-between items-center bg-gradient-to-r from-white to-blue-700">
           <div>
-            <h1 className="text-3xl font-bold mb-1">Hori Nguyen</h1>
-            <h2 className="text-xl mb-2">(he/him/his)</h2>
+            <img src="/Hori logo transparent.png" alt="Hori Nguyen" className="h-55 w-80 mb-4" />
           </div>
-          <div className="flex items-center">
-            <NavLink href="/">Home</NavLink>
-            <NavLink href="/about">About</NavLink>
-            <NavLink href="/projects">Projects</NavLink>
-            <NavLink href="/contact">Contact</NavLink>
+          <div className="flex items-center text-white font-bold">
+            <NavLink href="/">home</NavLink>
+            <NavLink href="/about">about</NavLink>
+            <NavLink href="/projects">projects</NavLink>
+            <NavLink href="/contact">contact</NavLink>
           </div>
         </nav>
       </header>
       <main className="bg-white text-black px-8 py-4">
-        <section className="py-8">
-          <h2 className="text-2xl font-bold mb-4">About Me</h2>
-          <p className="text-lg">
-            Hello! I'm a 4th year Computer Science student at California State
-            University Fullerton. I'm a passionate software developer with
-            experience in building web applications using technologies like
-            React, Node.js, and Next.js. I enjoy learning new technologies and
-            solving complex problems. I particularly enjoy frontend development
-            for its creative aspects and the opportunity it provides to craft
-            engaging user interfaces.
-          </p>
+        <section className="py-8 flex items-center">
+          <div className="flex-1 pr-8">
+            <h2 className="text-2xl font-bold mb-4 text-blue-700">about me</h2>
+            <p className="text-lg font-thin">
+              Hello! I'm a 4th year Computer Science student at California State
+              University Fullerton. I'm a passionate software developer with
+              experience in building web applications using technologies like
+              React, Node.js, and Next.js.
+            </p>
+          </div>
         </section>
         <section className="py-8">
-          <h2 className="text-2xl font-bold mb-4">Experience</h2>
+          <h2 className="text-2xl font-bold mb-4 text-blue-700">experience</h2>
           <section className="py-8">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <ExperienceCard
@@ -71,7 +70,7 @@ export default function Home() {
           </section>
         </section>
         <section className="py-8">
-          <h2 className="text-2xl font-bold mb-4">Skills and Technologies</h2>
+          <h2 className="text-2xl font-bold mb-4 text-blue-700">Skills and Technologies</h2>
           <div className="flex flex-wrap justify-center p-4">
             <div className="flex">
               <SkillCard imageUrl="/python_logo.png" />
@@ -100,12 +99,12 @@ export default function Home() {
           </div>
         </section>
         <section className="py-8">
-          <h2 className="text-2xl font-bold mb-4">Projects</h2>
+          <h2 className="text-2xl font-bold mb-4 text-blue-700">Projects</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <ProjectCard
               title="Predictive Model for Gender Affirming Care"
               description="Description of Project 4"
-              imageUrl="/project4.jpg"
+              imageUrl="/predictive_model.png"
             />
             <ProjectCard
               title="Motion"
@@ -195,8 +194,11 @@ function ProjectCard({ title, description, imageUrl }) {
 
 function SkillCard({ imageUrl }) {
   return (
-    <div className="border border-gray-300 rounded-lg overflow-hidden" style={{ width: '80px', height: '80px', margin: '8px' }}>
-      <div className = "p-4">
+    <div
+      className="border border-gray-300 rounded-lg overflow-hidden"
+      style={{ width: "80px", height: "80px", margin: "8px" }}
+    >
+      <div className="p-4">
         <div className="flex items-center justify-center h-full">
           <Image
             src={imageUrl}
@@ -237,7 +239,10 @@ function ExperienceCard({
 }
 function TechnologySkill({ imageUrl }) {
   return (
-    <div className="border border-gray-300 rounded-lg overflow-hidden" style={{ width: '80px', height: '80px', margin: '8px' }}>
+    <div
+      className="border border-gray-300 rounded-lg overflow-hidden"
+      style={{ width: "80px", height: "80px", margin: "8px" }}
+    >
       <div className="p-2">
         <div className="flex items-center justify-center h-full">
           <Image

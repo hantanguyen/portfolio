@@ -31,3 +31,8 @@ body {
     text-wrap: balance;
   }
 }
+
+@font-face {
+  font-family: 'Conthrax-SB';
+  src: url('/fonts/conthrax-sb.otf') format('opentype');
+}
